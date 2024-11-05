@@ -313,4 +313,4 @@ if __name__ == "__main__":
     global_data = {}
  
     #socket_.run(fapp, debug=False, host='0.0.0.0', port=1555,ssl_context=('server.crt', 'server.key'))
-    socket_.run(fapp, debug=False, host='0.0.0.0', port=1555)
+    socket_.run(fapp, debug=False, host='0.0.0.0', port=1555, allow_unsafe_werkzeug=True)

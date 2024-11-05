@@ -45,7 +45,7 @@ session["layouts_edit"] = False
 
 
 WSPORT = "1555"
-WS_URL = "WRITE_YOUR_ADDRESS_HERE"
+WS_URL = os.environ["WS_URL"] # Raises KeyError if WS URL is not defined
 
 locale_filename = "ru_locale.json"
 

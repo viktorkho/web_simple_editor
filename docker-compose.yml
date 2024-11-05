@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+
+  web_simple_editor:
+    build: .
+    container_name: web_simple_editor
+    #restart: unless-stopped
+    ports:
+      - ${WSPORT:-1555}:1555
+    user: "0" # should be a string
+    environment:
+      - WS_URL=$WS_URL
+      - ENV=development
+    volumes:
+      - ./flask_session:/app/flask_session
+      - ./uploads:/app/uploads
